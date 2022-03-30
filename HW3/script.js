@@ -4,8 +4,7 @@ let secondNumber;
 
 function checkOperator (operator) {
     const operators = ['+', '-', '*', '/'];
-    let isOperator = operators.includes(operator) ? true: false;
-    return isOperator;
+    return operators.includes(operator);
 };
 
 function calcResult (operator, firstNumber, secondNumber) {
@@ -34,10 +33,14 @@ function getNumber (index) {
     return number;
 };
 
-do {
-    operator = prompt('Choose what will we do? (+-*/');
-} while (!checkOperator(operator));
+function getOperator () {
+    do {
+        operator = prompt('Choose what will we do? (+-*/');
+    } while (!checkOperator(operator));
+    return operator;
+}
 
+operator = getOperator();
 firstNumber = getNumber('first');
 secondNumber = getNumber('second');
 
