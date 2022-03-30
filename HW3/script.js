@@ -3,7 +3,7 @@ let firstNumber;
 let secondNumber; 
 
 function checkOperator (operator) {
-    const operators = ['+', '-', '*', '/']
+    const operators = ['+', '-', '*', '/'];
     let isOperator = operators.includes(operator) ? true: false;
     return isOperator;
 };
@@ -24,15 +24,15 @@ function calcResult (operator, firstNumber, secondNumber) {
            result = firstNumber / secondNumber;
     };
     return result;
-}
+};
 
 function getNumber (index) {
     let number;
     do {
         number = +prompt(`Enter the ${index} number`);
-     } while (isNaN(number));
-     return number;
-}
+    } while (isNaN(number));
+    return number;
+};
 
 do {
     operator = prompt('Choose what will we do? (+-*/');
@@ -41,4 +41,4 @@ do {
 firstNumber = getNumber('first');
 secondNumber = getNumber('second');
 
- alert(`result: ${firstNumber} ${operator} ${secondNumber} = ${calcResult(operator, firstNumber, secondNumber)}`)
+alert(`result: ${firstNumber} ${operator} ${secondNumber} = ${calcResult(operator, firstNumber, secondNumber)}`);
