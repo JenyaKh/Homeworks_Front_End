@@ -28,7 +28,7 @@ function calcResult (operator, firstNumber, secondNumber) {
 
 do {
     operator = prompt('Choose what will we do? (+-*/');
-} while (checkOperator(operator) == false);
+} while (!checkOperator(operator));
 
 do {
    firstNumber = +prompt('Enter the first number');
@@ -39,4 +39,3 @@ do {
  } while (isNaN(secondNumber));
 
  alert(`result: ${firstNumber} ${operator} ${secondNumber} = ${calcResult(operator, firstNumber, secondNumber)}`)
- 
