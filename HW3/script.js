@@ -26,16 +26,19 @@ function calcResult (operator, firstNumber, secondNumber) {
     return result;
 }
 
+function getNumber (index) {
+    let number;
+    do {
+        number = +prompt(`Enter the ${index} number`);
+     } while (isNaN(number));
+     return number;
+}
+
 do {
     operator = prompt('Choose what will we do? (+-*/');
 } while (!checkOperator(operator));
 
-do {
-   firstNumber = +prompt('Enter the first number');
-} while (isNaN(firstNumber));
-
-do {
-    secondNumber = +prompt('Enter the second number');
- } while (isNaN(secondNumber));
+firstNumber = getNumber('first');
+secondNumber = getNumber('second');
 
  alert(`result: ${firstNumber} ${operator} ${secondNumber} = ${calcResult(operator, firstNumber, secondNumber)}`)
