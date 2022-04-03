@@ -26,11 +26,11 @@ function getOperands () {
 
 function getNumbers (operands) {
     let numbers = [];
-    let op = operands.split(',')
+    let op = operands.split(',');
     for (let i = 0; i < op.length; i++) {
         if (isNaN(op[i])) continue;
         numbers.push(+op[i]);        
-    }
+    };
     return numbers;
 }
 
@@ -63,7 +63,6 @@ function culcResult (operands, operator) {
     
     return result;
 };
-
 
 function showResult (operands, operator, result) {
     alert(`Operands: ${operands}, operation: ${operator}, result: ${result}`);
