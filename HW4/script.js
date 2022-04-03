@@ -21,30 +21,40 @@ function getOperands () {
     do {
         operands = prompt('Enter numbers separated by commas');
     } while (!operands);
-    return operands.split(',');
+    return getNumbers(operands)   
 };
 
+function getNumbers (operands) {
+    let numbers = [];
+    let op = operands.split(',')
+    for (let i = 0; i < op.length; i++) {
+        if (isNaN(op[i])) continue;
+        numbers.push(+op[i]);        
+    }
+    return numbers;
+}
+
 function culcResult (operands, operator) {
-    let result = +operands[0];
+    let result = operands[0];
     switch (operator) {
         case '+':
             for (let i = 1; i < operands.length; i++) {
-                result = result + Number(operands[i]);
+                result = result + operands[i];
             }
             break;
         case '-':
             for (let i = 1; i < operands.length; i++) {
-                result = result - Number(operands[i]);
+                result = result - operands[i];
             }
             break;
         case '*':
             for (let i = 1; i < operands.length; i++) {
-                result = result * Number(operands[i]);
+                result = result * operands[i];
             }
             break;
         case '/':
             for (let i = 1; i < operands.length; i++) {
-                result = result / Number(operands[i]);
+                result = result / operands[i];
             }
             break;
         default:
@@ -53,6 +63,7 @@ function culcResult (operands, operator) {
     
     return result;
 };
+
 
 function showResult (operands, operator, result) {
     alert(`Operands: ${operands}, operation: ${operator}, result: ${result}`);
