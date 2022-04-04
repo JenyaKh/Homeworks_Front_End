@@ -65,5 +65,9 @@ function culcResult (operands, operator) {
 };
 
 function showResult (operands, operator, result) {
-    alert(`Operands: ${operands}, operation: ${operator}, result: ${result}`);
+    let expression = operands[0];
+    for (let i = 1; i < operands.length; i++) {
+        expression += ` ${operator} ${operands[i]}` 
+    }
+    alert(`${expression} = ${result}`);
 };
