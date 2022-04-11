@@ -1,18 +1,3 @@
-function copy(obj) {
-
-    if (obj == null || typeof(obj) != 'object') return obj;
-
-    if (Array.isArray(obj)) {
-        return obj.map(element => copy(element));
-    } else {
-        let newObj = {};
-        for (let key in obj) {
-            newObj[key] = copy(obj[key]);
-        }
-        return newObj;
-    }
-}
-
 const obj = {
     name: 'Alex',
     age: 33, 
@@ -30,3 +15,18 @@ const obj = {
 }
 
 const objCopy = copy(obj);
+
+function copy(obj) {
+
+    if (obj == null || typeof(obj) != 'object') return obj;
+
+    if (Array.isArray(obj)) {
+        return obj.map(element => copy(element));
+    } else {
+        let newObj = {};
+        for (let key in obj) {
+            newObj[key] = copy(obj[key]);
+        }
+        return newObj;
+    }
+}
