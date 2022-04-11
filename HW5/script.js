@@ -37,13 +37,10 @@ function sumMarks(student) {
 };
 
 function averageGroupMark(students) {
-    let sumAllMarks = 0;
-    let countAllMarks = 0;
-    students.forEach(val => {
-        sumAllMarks += sumMarks(val);
-        countAllMarks += val.marks.length;
-    });
-    return (sumAllMarks / countAllMarks).toFixed(2);
+    let allMarks = students.reduce((acc, val) => acc + val.marks, students[0].marks);
+    let marks = allMarks.flat();
+    alert(marks);
+
 };
 
 function minGroupMark(students) {
