@@ -1,0 +1,47 @@
+.result {
+    font-weight: bold;
+    font: 400 30px Arial;
+}
+
+
+.error {
+    color: red;
+    font: 400 30px Arial;
+}
+
+
+input {
+    font: 20px Arial;
+    padding: 5px 5px;
+    border-width: 2px;
+}
+
+
+select {
+    background-color: lightgoldenrodyellow;
+    font: 400 20px Arial;
+    border-width: 1px;
+}
+
+
+button {
+    font: 400 20px Arial;
+    text-align: center;
+    padding: 1px 6px;
+    background-color: greenyellow;
+    border-width: 2px;
+    border-style: inset;
+    border-color: green;
+    border-radius: 15%;
+    margin-top: 20px;
+    margin-left: 270px;
+    width: 150px;
+    height: 70px;
+    font-weight: bold;
+}
+
+
+.main {
+    width: 750px;
+    margin: 0 auto;
+}
