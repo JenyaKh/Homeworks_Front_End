@@ -3,14 +3,13 @@ const inputEl = document.getElementById('input');
 const listEl = document.getElementById('list');
 const errorEl = document.getElementById('error');
 
-let error;
 
 buttonAddEl.addEventListener('click', onButtonAddClick);
 inputEl.addEventListener('input', onTextInput);
 listEl.addEventListener('click', onItemClick);
 
 function onButtonAddClick() {
-    error = checkLength();
+    const error = checkLength();
     if (!error) {
         createItem();
         clearInput();
@@ -24,7 +23,7 @@ function createItem() {
 };
 
 function onTextInput() {
-    error = checkLength();
+    const error = checkLength();
     error ? showError() : hideError();
 };
 
