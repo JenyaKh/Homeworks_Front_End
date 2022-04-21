@@ -46,6 +46,6 @@ function clearInput() {
 };
 
 function onItemClick(event) {
-    const itemClass = event.target.classList;
-    itemClass.contains('marked') ? itemClass.remove('marked') : itemClass.add('marked'); 
+    const item = event.target;
+    item.classList.contains('marked') ? item.classList.remove('marked') : item.classList.add('marked'); 
 };
