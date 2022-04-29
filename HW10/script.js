@@ -10,9 +10,9 @@ const NEW_ROW_TEMPLATE = document.getElementById('newRow').innerHTML;
 const HIDDEN_CLASS = 'hidden';
 const DELETE_BTN_CLASS = 'deleteBtn';
 const ERROR_MESSAGE = {
-                      firstName: 'Firstname must not be empty',
-                      lastName: 'Lastname must not be empty',
-                      number: 'Number must not be empty',
+                      FIRST_NAME: 'Firstname must not be empty',
+                      LAST_NAME: 'Lastname must not be empty',
+                      NUMBER: 'Number must not be empty',
                     }
 const CONTACT_ROW_CLASS = 'contactRow';
 
@@ -42,9 +42,9 @@ function validateForm() {
 }
 
 function validateData(firstName, lastName, number) {
-    if (firstName === '') return ERROR_MESSAGE.firstName;
-    if (lastName === '') return ERROR_MESSAGE.lastName;
-    if (number === '') return ERROR_MESSAGE.number;
+    if (firstName === '') return ERROR_MESSAGE.FIRST_NAME;
+    if (lastName === '') return ERROR_MESSAGE.LAST_NAME;
+    if (number === '') return ERROR_MESSAGE.NUMBER;
     return null;
 }
 
