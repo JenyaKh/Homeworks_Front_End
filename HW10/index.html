@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <table id="contactsTable" class="contacts">
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Number</th>
+                <th>Action</th>
+            </tr>
+            <script type="text/template" id="newRow">
+                <tr class='contactRow'>
+                    <td> {{firstName}}</td>
+                    <td> {{lastName}}</td>
+                    <td> {{number}}</td>
+                    <td class="deleteBtn">✘</td>
+                </tr>
+            </script>
+        </table>
+        <form type="submit" id="addContactForm">
+        <input type="text" id="firstName" placeholder="Firstname">
+        <input type="text" id="lastName" placeholder="Lastname">
+        <input type="text" id="number" placeholder="Number">
+        <span id="error" class="error hidden"></span>
+        <button id="buttonAdd" type="submit">Add</button>
+        </form>
+        
+
+    </div>
+</body>
+</html>
