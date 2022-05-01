@@ -1,0 +1,62 @@
+input {
+    font: 20px Arial;
+    padding: 5px 5px;
+    border-width: 2px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.deleteBtn {
+    float: right;
+}
+
+.main {
+    width: 400px;
+    margin: 100px auto;
+}
+
+.container {
+    font: 25px Arial;
+    width: 100%;
+}
+
+.invalid {
+    background-color: red;
+}
+
+.hidden {
+    display: none;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+.taskItem {
+    border: 1px solid black;
+}
+
+.not-done {
+    background-color: lightskyblue;   
+}
+
+.done {
+    background-color: lightgreen;
+    font-weight: bold;
+}
+
+button {
+    font: 400 20px Arial;
+    text-align: center;
+    padding: 1px 6px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: lightblue;
+    border-radius: 5%;
+    margin-top: 20px;
+    margin-left: 140px;
+    width: 150px;
+    height: 40px;
+    font-weight: bold;
+}
