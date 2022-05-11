@@ -81,11 +81,10 @@ class Hamburger {
 
 const hamburger = new Hamburger(SIZE_BIG);
 
- hamburger.addTopping(TOPPING_MAYO);
- hamburger.addTopping(TOPPING_POTATO);
- hamburger.addTopping(TOPPING_CHEESE);
- hamburger.addTopping(TOPPING_MAYO);
-
+hamburger.addTopping(TOPPING_MAYO);
+hamburger.addTopping(TOPPING_POTATO);
+hamburger.addTopping(TOPPING_CHEESE);
+hamburger.addTopping(TOPPING_MAYO);
 
 console.log(`Price with toppings ${hamburger.getToppings()}: ${hamburger.getPrice()}`);
 console.log(`Callories with toppings: ${hamburger.getCallories()}`);
