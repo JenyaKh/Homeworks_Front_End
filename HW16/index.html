@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Contacts</title>
+        <link rel="stylesheet" href="./style.css" />
+        <script src="./script.js" defer></script>
+    </head>
+    <body>
+        <div class="main">
+            <form id="newContactForm">
+                <table>
+                    <thead>
+                     <tr>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody id="contactsList"></tbody>
+                    <tfoot>
+                        <tr>
+                            <td>
+                                <input type="hidden" name="id" class="formInput" />
+                                <input type="text" name="name" id="nameInput" class="formInput"/>
+                            </td>
+                            <td>
+                                <input type="text" name="phone" id="surnameInput" class="formInput"/>
+                            </td>
+                            <td>
+                                <input type="text" name="email" id="phoneInput" class="formInput"/>
+                            </td>
+                            <td><input type="submit" id="addContactBtn" value="Add Contact"></td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <span id="error" class="error hidden">value is not valid</span>
+            </form>
+        </div>
+        <script type="text/template" id="contactTemplate">
+            <tr class="contactRow" data-contact-id={{id}}>
+                <td>{{name}}</td>
+                <td>{{phone}}</td>
+                <td>{{email}}</td>
+                <td>
+                    <button type="button" class="updateBtn">Update</button>
+                    <button type="button" class="deleteBtn">Delete</button>
+                </td>
+            </tr>
+        </script>   
+    </body>
+</html>
