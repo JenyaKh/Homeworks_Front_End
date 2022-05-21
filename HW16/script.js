@@ -7,6 +7,7 @@ const API_URL = 'https://5dd3d5ba8b5e080014dc4bfa.mockapi.io/users/';
 const contactFormEl = document.getElementById('newContactForm');
 const errorEl = document.getElementById('error');
 const contactsListEl = document.getElementById('contactsList');
+const hiddenEl = document.getElementById('hiddenId');
 const contactTemplate = document.getElementById('contactTemplate').innerHTML;
 const formInputs = document.querySelectorAll('.formInput');
 const addContactBtnEl = document.getElementById('addContactBtn');
@@ -57,6 +58,7 @@ function onContactFormSubmit(e) {
         hideError();
         saveContact(newContact);
         resetForm();
+        cleanHidden();
     } else {
         showError();
     }
@@ -130,6 +132,10 @@ function updateContact(contact) {
 
 function resetForm() {
     contactFormEl.reset();
+}
+
+function cleanHidden() {
+    hiddenEl.value = "";
 }
 
 function onContactsListClick(e) {
