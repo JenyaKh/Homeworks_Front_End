@@ -1,6 +1,6 @@
 const ALBUM_BOX_SELECTOR = '.albumBox';
 const PHOTO_BOX_SELECTOR = '.photoBox';
-const ALBUM_VIEWED = 'viewed';
+const ALBUM_VIEWED_CLASS = 'viewed';
 
 const albumsEl = document.getElementById('albums');
 const photosEl = document.getElementById('photos');
@@ -76,7 +76,7 @@ function onAlbumsListClick(e) {
 }
 
 function markAlbumViewed(album) {
-    album.classList.add(ALBUM_VIEWED);
+    album.classList.add(ALBUM_VIEWED_CLASS);
 }
 
 function getAlbumId(el) {
