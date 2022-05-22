@@ -92,9 +92,9 @@ function onPhotosListClick(e) {
 }
 
 function getPhotoId(el) {
-    const photoRowEl = el.closest(PHOTO_BOX_SELECTOR);
+    const photoBoxEl = el.closest(PHOTO_BOX_SELECTOR);
 
-    return photoRowEl.dataset.photoId;
+    return photoBoxEl.dataset.photoId;
 }
 
 function getPhotoObj(photoId) {
