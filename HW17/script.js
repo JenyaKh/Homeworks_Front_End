@@ -86,6 +86,7 @@ function getAlbumId(el) {
 }
 
 function onPhotosListClick(e) {
+    console.log(e.target);
     const id = getPhotoId(e.target);
     const photo = getPhotoObj(id);
     showModal(photo);
