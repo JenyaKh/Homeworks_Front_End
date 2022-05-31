@@ -1,0 +1,55 @@
+.main {
+    width: 100%;
+    height:100%
+
+}
+
+.header {
+  border-width:1;
+  border-color: orange;
+  border-style: solid;
+  height: 60px;
+  width: 95%;
+  margin-left: 15px;
+
+}
+
+.addBtn {
+  font-size: 30px;
+  float: right;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.sticker {
+  border-width:1;
+  border-color: orange;
+  border-style: solid;
+  height: 200px;
+  width: 170px;
+  margin-top: 15px;
+  margin-left: 15px;
+  display: inline-block;
+}
+
+.text {
+  margin-left: 7px;
+  margin-top: 5px;
+  width: 150px;
+  height: 150px;
+}
+
+.stickerHeader {
+  height: 25px;
+  width: 170px;
+  border-bottom-width: 1;
+  border-bottom-color: orange;
+  border-bottom-style: solid
+
+}
+
+.deleteBtn {
+  float: right;
+  margin-right: 5px;
+  margin-top: 1px;
+}
