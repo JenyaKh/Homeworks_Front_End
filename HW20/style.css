@@ -1,0 +1,27 @@
+.main {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  top: 0;
+  overflow: scroll;
+
+}
+
+.left {
+  left: 0;
+  background-color: lightyellow;
+}
+
+.right {
+  right: 0;
+  background-color: lightblue;
+}
+
+.photoBox {
+  display: inline;
+}
+
+.title {
+  font-size: 18px;
+  color: blue;
+}

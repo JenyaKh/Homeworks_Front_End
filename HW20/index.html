@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Gallery</title>
+        <link rel="stylesheet" href="./style.css" />
+        <link rel="stylesheet" href="./modal.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+        <script src="./RestApi.js"></script>
+        <script src="./script.js"></script>    
+    </head>
+    <body>
+        <div class="main left" id="albums">
+            <div id="albumsList"></div>
+        </div>
+
+        <div class="main right">
+            <div id="photosList"></div>
+        </div>  
+
+        <script type="text/template" id="albumTemplate">
+            <div class="albumBox" data-album-id={{id}}>
+                <p class="title">{{title}}</p>
+            </div>
+        </script>   
+
+        <script type="text/template" id="photoTemplate">
+            <div class="photoBox">
+                <a href="{{url}}" data-fancybox="gallery" data-caption="{{title}}" class="gallery"><img src={{thumbnailUrl}}></a>
+            </div>
+        </script> 
+        
+    </body>
+</html>
