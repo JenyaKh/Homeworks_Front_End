@@ -1,4 +1,4 @@
-class FormListView{
+class TodoFormView {
     static FORM_TEMPLATE = `<form id="addTaskForm">
     <div class="row">
         <div class="ten columns">
@@ -22,11 +22,11 @@ class FormListView{
         
     constructor(config = {}){
             
-        this.$el = $(FormListView.FORM_TEMPLATE)
+        this.$el = $(TodoFormView.FORM_TEMPLATE)
             .on( 'submit', (e) => {
                 e.preventDefault(); 
-                config.onAddTodo && config.onAddTodo({'title': $(FormListView.IMPUT_ELEMENT).val()});
-                $(FormListView.IMPUT_ELEMENT).val('');
+                config.onAddTodo && config.onAddTodo({'title': $(TodoFormView.IMPUT_ELEMENT).val()});
+                $(TodoFormView.IMPUT_ELEMENT).val('');
                 }
             );             
         }         
