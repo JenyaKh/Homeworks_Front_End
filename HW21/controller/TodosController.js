@@ -12,7 +12,7 @@ class TodosController {
             .fetchList()
             .then(() => this._todosListView.renderList(this._todosList.list));
 
-         this._formListView = new FormListView({
+         this._todoFormView = new TodoFormView({
             onAddTodo: (todo) => this.addTodo(todo),
          });
 
