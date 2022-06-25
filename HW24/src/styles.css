@@ -1,0 +1,27 @@
+.album-item {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.album-item:hover {
+    border: 1px solid lightyellow;
+}
+
+.main {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    top: 0;
+    overflow: scroll;
+  
+}
+  
+.left {
+    left: 0;
+    background-color: lightyellow;
+}
+  
+.right {
+    right: 0;
+    background-color: lightblue;
+}
